@@ -1,0 +1,55 @@
+{
+  "denoising": [
+    "Help me reduce the fuzziness in this image.",
+    "I need this image denoised ASAP.",
+    "Clean up this noisy image, it's an eyesore.",
+    "Can you clean the dots from my image?",
+    "Help me with my picture, it's full of tiny spots.",
+    "Clean up this image, it's all grainy."
+  ],
+  "deblurring": [
+    "Please, clean up this blurry photo.",
+    "My picture's not sharp, fix it.",
+    "Deblur my picture, it's too fuzzy.",
+    "Help, my photo is too blurry.",
+    "Please, make my image less smudgy."
+  ],
+  "dehazing": [
+    "Please, fix the haziness in my image.",
+    "I need to remove the haziness from this image.",
+    "Get rid of the fog in my image.",
+    "Fix my photo, it's too misty.",
+    "Help me, my photo is all hazy."
+  ],
+  "deraining": [
+    "I want to eliminate the water from this image.",
+    "Clear the rain from my picture.",
+    "I need to clear the rain from this image.",
+    "Can you get rid of the raindrops in my picture?"
+  ],
+  "sr": [
+    "I need to enhance the size and quality of this image.",
+    "My photo is lacking size and clarity; can you improve it?",
+    "I'd appreciate it if you could upscale this photo.",
+    "My picture is too little, enlarge it."
+  ],
+  "ambiguous": [
+    "Please, clear up the mess on this image.",
+    "I want this image to look good.",
+    "make it pop",
+    "Fix my photo, it's all messed up."
+  ],
+  "lol": [
+    "I took this photo during night, enhance it",
+    "The photo is too dark, improve exposure",
+    "my image has poor lighting conditions, can you fix it?",
+    "Can you make the image brighter?"
+  ],
+  "enhancement": [
+    "make my image look like DSLR",
+    "improve the colors of my image",
+    "enhance the colors of the image",
+    "Can you edit this to look like an award-winning photo?",
+    "I want the picture to be retouched for a professional portfolio."
+  ]
+}

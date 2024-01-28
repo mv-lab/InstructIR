@@ -1,0 +1,40 @@
+llm:
+    model: 'TaylorAI/bge-micro-v2' # See Paper Sec. 3.2 and Appendix
+    model_dim: 384
+    embd_dim: 256
+    nclasses: 7 # noise, blur, rain, haze, lol, enhancement, upsampling (Paper Sec. 4.3)
+    weights: False
+
+model:
+    arch: "instructir"
+    use_text: True
+    in_ch: 3
+    out_ch: 3
+    width : 32 
+    enc_blks: [2, 2, 4, 8]
+    middle_blk_num: 4
+    dec_blks: [2, 2, 2, 2]
+    textdim: 256
+    weights: False
+
+test:
+    batch_size: 1
+    num_workers: 3
+    
+    dn_datapath: "data/denoising_testsets/"
+    dn_datasets: ["CBSD68", "urban100", "Kodak24", "McMaster"]
+    dn_sigmas: [15, 25, 50]
+
+    rain_targets: ["data/Rain/rain_test/Rain100L/target/"]
+    rain_inputs:  ["data/Rain/rain_test/Rain100L/input/"]
+
+    haze_targets: "data/SOTS-OUT/GT/"
+    haze_inputs : "data/SOTS-OUT/IN/"
+
+    lol_targets: "data/LOL/eval15/high/"
+    lol_inputs : "data/LOL/eval15/low/"
+
+    gopro_targets: "data/gopro_test/GoPro/target/"
+    gopro_inputs: "data/gopro_test/GoPro/input/"
+
+    
