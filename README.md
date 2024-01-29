@@ -1,9 +1,9 @@
 # InstructIR ✏️🖼️
 ## [High-Quality Image Restoration Following Human Instructions]()
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2306.11920)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](static/instructir_paper.pdf)
 <a href="https://colab.research.google.com/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> 
-[![Hugging Face](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue)](https://huggingface.co/marcosv) 
+[![Hugging Face](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue)](https://huggingface.co/spaces/marcosv/InstructIR) 
 [![Replicate](https://img.shields.io/badge/Demo-%F0%9F%9A%80%20Replicate-blue)](https://replicate.com/mv-lab) 
 
 
@@ -29,28 +29,34 @@ Image restoration is a fundamental problem that involves recovering a high-quali
 ### TODO / News 🔥
 
 - [ ] Replicate Demo
-- [ ] Upload all test results
-- [x] 🤗 Hugging Face Demo
-- [x] Colab Tutorial
+- [ ] Upload all test results (ETA 1st Feb)
+- [x] Upload models to HF 🤗 [(download the models here)](https://huggingface.co/marcosv/InstructIR)
+- [x] 🤗 [Hugging Face Demo](https://huggingface.co/spaces/marcosv/InstructIR) try it now
+- [x] Colab Tutorial (check [demo.ipynb](demo.ipynb))
 
 ### Try it / Tutorial
+
+[Try it]((https://huggingface.co/spaces/marcosv/InstructIR)) directly on 🤗 Hugging Face at no cost, no code.
+
+
+🚀 You can start with the [demo tutorial](demo.ipynb). We also host the same tutorial on [google colab]() so you can run it using free GPUs!.
 
 <center> 
 <img src="images/instructir_teaser.gif" alt="InstructIR App" width=50%>
 </center>
 <br>
 
-Try it directly on 🤗 Hugging Face at no cost, no code.
-
-
-🚀 You can start with the [demo tutorial](demo.ipynb). We also host the same tutorial on [google colab]() so you can run it using free GPUs!.
-
 #### Gradio Demo
-We made a simple [Gradio demo](gradio_demo.py) you can run (locally) on your machine [here](gradio_demo.py). You need Python>=3.10 and [these requirements](requirements_gradio.txt) for it: `pip install -r requirements_gradio.txt`
+We made a simple [Gradio demo](app.py) you can run (locally) on your machine [here](app.py). You need Python>=3.9 and [these requirements](requirements_gradio.txt) for it: `pip install -r requirements_gradio.txt`
 
 ```
-python gradio_demo.py
+python app.py
 ```
+
+<center> 
+<br>
+<img src="images/gradio.png" alt="InstructIR Gradio" width=90%>
+</center>
 
 ### Results
 
@@ -65,6 +71,7 @@ You can download the paper results from here. We test InstructIR in the followin
 | [LOL](https://daooshee.github.io/BMVC2018website/)               |   Lol Image Enhancement   | [Download]() |
 | [MIT5K](https://data.csail.mit.edu/graphics/fivek/)             |   Image Enhancement   | [Download]() |
 
+TODO: Add download links for all the benchmarks.
 
 ### Control and Interact
 
@@ -99,13 +106,13 @@ The final result looks indeed stunning 🤗 You can do it yourself in the [demo 
 
 > Disclaimer: please remember this is not a product, thus, you will notice some limitations.
 
-- *How should I start?* Check our [demo Tutorial](demo.ipynb) and also our [google collab]() notebook.
+- ***How should I start?*** Check our [demo Tutorial](demo.ipynb) and also our [google collab]() notebook.
 
-- *How can I compare with your method?* You can download the results for several benchmarks above on [Results](###Results).
+- ***How can I compare with your method?*** You can download the results for several benchmarks above on [Results](###Results).
 
-- *How can I test the model? I just want to play with it*: Visit our 🤗 [Hugging Face demo]() and test ir for free,
+- ***How can I test the model? I just want to play with it***: Visit our 🤗 [Hugging Face demo]() and test ir for free,
 
-- *Why aren't you using diffusion-based models?* (1) We want to keep the solution simple and efficient. (2) Our priority is high-fidelity --as in most industry scenarios realted to computational photography--. 
+- ***Why aren't you using diffusion-based models?*** (1) We want to keep the solution simple and efficient. (2) Our priority is high-fidelity --as in many industry scenarios realted to computational photography--. 
 
 
 ### Acknowledgments
