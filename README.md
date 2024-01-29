@@ -2,7 +2,7 @@
 ## [High-Quality Image Restoration Following Human Instructions]()
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2306.11920)
-<a href="https://colab.research.google.com/drive/11SE2_oDvbYtcuHDbaLAxsKk_o3flsO1T?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> 
+<a href="https://colab.research.google.com/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> 
 [![Hugging Face](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue)](https://huggingface.co/marcosv) 
 [![Replicate](https://img.shields.io/badge/Demo-%F0%9F%9A%80%20Replicate-blue)](https://replicate.com/mv-lab) 
 
@@ -12,7 +12,6 @@
 Computer Vision Lab, University of Wuerzburg | Sony PlayStation, FTG
 
 <img src="images/instructir_teaser.png" alt="InstructIR" width=100%>
-<br>
 
 ### TL;DR: quickstart
 InstructIR takes as input an image and a human-written instruction for how to improve that image. The neural model performs all-in-one image restoration. InstructIR achieves state-of-the-art results on several restoration tasks including image denoising, deraining, deblurring, dehazing, and (low-light) image enhancement.
@@ -21,7 +20,7 @@ InstructIR takes as input an image and a human-written instruction for how to im
 
 <details>
 <summary> <b> Abstract</b> (click me to read)</summary>
-<p align="center">
+<p>
 Image restoration is a fundamental problem that involves recovering a high-quality clean image from its degraded observation. All-In-One image restoration models can effectively restore images from various types and levels of degradation using degradation-specific information as prompts to guide the restoration model. In this work, we present the first approach that uses human-written instructions to guide the image restoration model. Given natural language prompts, our model can recover high-quality images from their degraded counterparts, considering multiple degradation types. Our method, InstructIR, achieves state-of-the-art results on several restoration tasks including image denoising, deraining, deblurring, dehazing, and (low-light) image enhancement. InstructIR improves +1dB over previous all-in-one restoration methods. Moreover, our dataset and results represent a novel benchmark for new research on text-guided image restoration and enhancement.
 </p>
 </details>
@@ -36,18 +35,36 @@ Image restoration is a fundamental problem that involves recovering a high-quali
 
 ### Try it / Tutorial
 
+<center> 
+<img src="images/instructir_teaser.gif" alt="InstructIR App" width=50%>
+</center>
+<br>
+
 Try it directly on 🤗 Hugging Face at no cost, no code.
 
 
 🚀 You can start with the [demo tutorial](demo.ipynb). We also host the same tutorial on [google colab]() so you can run it using free GPUs!.
 
 #### Gradio Demo
-We made a simple Gradio demo you can run on your machine [here](gradio_demo.py).
-You need Python>=3.10 and [these requirements](requirements_gradio.txt) for it.
+We made a simple [Gradio demo](gradio_demo.py) you can run (locally) on your machine [here](gradio_demo.py). You need Python>=3.10 and [these requirements](requirements_gradio.txt) for it: `pip install -r requirements_gradio.txt`
+
+```
+python gradio_demo.py
+```
 
 ### Results
 
-You can download the paper results from here.
+You can download the paper results from here. We test InstructIR in the following benchmarks:
+
+| Dataset           | Task     | Test Results |
+| :---------------- | :------ | ----: |
+| BSD68             |   Denoising   | [Download]() |
+| Urban100          |   Denoising   | [Download]() |
+| Rain100           |   Deraining   | [Download]() |
+| [GoPro](https://seungjunnah.github.io/Datasets/gopro)             |   Deblurring  | [Download]() |
+| [LOL](https://daooshee.github.io/BMVC2018website/)               |   Lol Image Enhancement   | [Download]() |
+| [MIT5K](https://data.csail.mit.edu/graphics/fivek/)             |   Image Enhancement   | [Download]() |
+
 
 ### Control and Interact
 
@@ -82,12 +99,11 @@ The final result looks indeed stunning 🤗 You can do it yourself in the [demo 
 
 > Disclaimer: please remember this is not a product, thus, you will notice some limitations.
 
-- *How should I start?*
-Tutorial
+- *How should I start?* Check our [demo Tutorial](demo.ipynb) and also our [google collab]() notebook.
 
-- *How can I compare with your method?* You can download the results for several benchmarks.
+- *How can I compare with your method?* You can download the results for several benchmarks above on [Results](###Results).
 
-- *How can I test the model? I just want to play with it*: 
+- *How can I test the model? I just want to play with it*: Visit our 🤗 [Hugging Face demo]() and test ir for free,
 
 - *Why aren't you using diffusion-based models?* (1) We want to keep the solution simple and efficient. (2) Our priority is high-fidelity --as in most industry scenarios realted to computational photography--. 
 
@@ -101,7 +117,7 @@ This work is inspired in [InstructPix2Pix](https://arxiv.org/abs/2211.09800).
 For any inquiries contact Marcos V. Conde: <a href="mailto:marcos.conde@uni-wuerzburg.de">marcos.conde [at] uni-wuerzburg.de</a>
 
 
-#### Citation BibTeX
+### Citation BibTeX
 
 ```
 @misc{conde2024instructir,
