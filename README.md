@@ -41,6 +41,10 @@ Try it directly on 🤗 Hugging Face at no cost, no code.
 
 🚀 You can start with the [demo tutorial](demo.ipynb). We also host the same tutorial on [google colab]() so you can run it using free GPUs!.
 
+#### Gradio Demo
+We made a simple Gradio demo you can run on your machine [here](gradio_demo.py).
+You need Python>=3.10 and [these requirements](requirements_gradio.txt) for it.
+
 ### Results
 
 You can download the paper results from here.

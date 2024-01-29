@@ -1,0 +1,6 @@
+# torch
+# Python>=3.10
+Pillow
+sentence-transformers
+gradio
+gradio_imageslider
