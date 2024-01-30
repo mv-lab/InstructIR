@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="description" content="InstructIR: High-Quality Image Restoration Following Human Instructions ">
+  <meta name="keywords" content="Computer Vision, Image Restoration, Multimodal, Prompt">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InstructIR</title>
+
+  <style type="text/css">svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fad.fa-inverse{color:#fff}</style><link rel="stylesheet" href="static/css.css">
+  <link rel="stylesheet" href="static/bulma.min.css">
+  <link rel="stylesheet" href="static/bootstrap.min.css">
+  <link rel="stylesheet" href="static/academicons.min.css">
+  <link rel="stylesheet" href="static/all.min.css">
+  <link rel="stylesheet" href="static/index.css">
+  <link rel="icon" href="https://emojiisland.com/cdn/shop/products/Robot_Emoji_Icon_abe1111a-1293-4668-bdf9-9ceb05cff58e_large.png?v=1571606090">
+  <link href="static/icon.css" rel="stylesheet">
+
+
+  <script src="static/jquery.min.js"></script>
+  <script defer="defer" src="static/all.min.js"></script>
+  <script type="module" src="static/gradio.js"></script>
+<style>
+  .expandable-card .card-text-container {
+    max-height: 200px;
+    overflow-y: hidden;
+    position: relative;
+  }
+
+  .expandable-card.expanded .card-text-container {
+    max-height: none;
+  }
+
+  .expand-btn {
+    position: relative;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* margin-top: -20px; */
+    /* justify-content: center; */
+    color: #510c75;
+    border-color: transparent;
+  }
+
+  .expand-btn:hover {
+    background-color: rgba(200, 200, 200, 0.8);
+    text-decoration: none;
+    border-color: transparent;
+    color: #510c75;
+  }
+
+  .expand-btn:focus {
+    outline: none;
+    text-decoration: none;
+  }
+
+  .expandable-card:not(.expanded) .card-text-container:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1));
+  }
+
+  .expandable-card:not(.expanded) .expand-btn {
+    margin-top: -40px;
+  }
+
+  .card-body {
+    padding-bottom: 5px;
+  }
+
+  .vertical-flex-layout {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .figure-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .adjustable-font-size {
+    font-size: calc(0.5rem + 2vw);
+  }
+
+  .chat-history {
+    flex-grow: 1;
+    overflow-y: auto;
+    /* overflow-x: hidden; */
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  #gradio pre {
+    background-color: transparent;
+  }
+</style><script type="module" crossorigin="" src="static/index-9405f928.js"></script><link rel="stylesheet" href="static/index-8f5e8d2d.css"><link rel="stylesheet" href="static/theme.css"><link rel="stylesheet" href="static/css2.css"><link rel="stylesheet" href="static/css2_002.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Blocks-b7e1d3bc.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Button-496612d6.js"><link rel="stylesheet" href="static/Button-3657eefc.css"><link rel="stylesheet" href="static/Blocks-005a10ea.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-7da00dd0.js"><link rel="modulepreload" as="script" crossorigin="" href="static/index-9405f928.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-e350ed90.js"><link rel="stylesheet" href="static/index-edf307d2.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-9454ebde.js"><link rel="stylesheet" href="static/index-93c91554.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-29aa4c6e.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Column-56337312.js"><link rel="stylesheet" href="static/Column-2853eb31.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-6c061571.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/BlockTitle-3b63dcc6.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Info-88fa40fc.js"><link rel="stylesheet" href="static/ColorPicker-41813019.css"><link rel="stylesheet" href="static/DropdownArrow-5fa4dd09.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-dc4f9a55.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/BlockLabel-eae79103.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Image-0296a7e2.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/StaticImage.svelte_svelte_type_style_lang-943673fc.js"><link rel="stylesheet" href="static/StaticImage-ede66243.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/ModifyUpload-3ceaec64.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/ModifyUpload.svelte_svelte_type_style_lang-ba6baa96.js"><link rel="stylesheet" href="static/ModifyUpload-77b0d4b2.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Upload-0b7d7edd.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Empty-0bf01d93.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Download-836e8a5d.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/UploadText-67055cc3.js"><link rel="stylesheet" href="static/UploadText-33d53a1c.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Image-4f594cb8.js"><link rel="stylesheet" href="static/Image-003ee87c.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-fb7b6d6a.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-4360065a.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/_commonjsHelpers-042e6b4d.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/csv-b0b7514a.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/dsv-576afacd.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Model3D-49e4759c.js"><link rel="stylesheet" href="static/Model3D-98fc2b2c.css"><link rel="stylesheet" href="static/index-4a8edf2e.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-544cdc5f.js"><link rel="stylesheet" href="static/index-8f1feca1.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-efacc33c.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-5ff6e9da.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Form-e2ba6e12.js"><link rel="stylesheet" href="static/Form-a4a7741e.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-74280621.js"><link rel="stylesheet" href="static/index-d9aad8e1.css"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-f67a924c.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Textbox-91bfa043.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/Copy-4761247d.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-00a3ebda.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/assets/index-1c9d35e7.js"><link rel="stylesheet" href="static/index-3ca142e0.css"><script async="" defer="defer" src="static/js.js"></script></head>
+
+
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">InstructIR: High-Quality Image Restoration Following Human Instructions</h1>
+            <br>
+            <div class="is-size-4 publication-authors">
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=NtB1kjYAAAAJ" style="color:#f68946;font-weight:normal;">Marcos V. Conde<sup>1,2</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=uIlyqRwAAAAJ&hl=en" style="color:#008AD7;font-weight:normal;">Gregor Geigle<sup>1</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=en&user=u3MwH5kAAAAJ" style="color:#F2A900;font-weight:normal;">Radu Timofte<sup>1</sup></a>,
+              </span>
+
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><b style="color:#f68946; font-weight:normal">▶ </b> <sup>1</sup>Computer Vision Lab, University of Wuerzburg</span>
+              &nbsp&nbsp <span class="author-block"><b style="color:#008AD7; font-weight:normal">▶ </b> <sup>2</sup>Sony PlayStation, FTG</span>
+            </div>
+
+            <br>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+
+
+              <span class="link-block">
+                <a href="https://github.com/mv-lab/InstructIR/blob/main/static/instructir_paper.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+                <span class="link-block">
+                  <a href="https://github.com/mv-lab/InstructIR/blob/main/static/instructir_paper.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/mv-lab/InstructIR/" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/spaces/marcosv/InstructIR" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <svg class="svg-inline--fa fa-images fa-w-18" aria-hidden="true" focusable="false" data-prefix="far" data-icon="images" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v48H54a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6v-10h48zm42-336H150a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6V86a6 6 0 0 0-6-6zm6-48c26.51 0 48 21.49 48 48v256c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h384zM264 144c0 22.091-17.909 40-40 40s-40-17.909-40-40 17.909-40 40-40 40 17.909 40 40zm-72 96l39.515-39.515c4.686-4.686 12.284-4.686 16.971 0L288 240l103.515-103.515c4.686-4.686 12.284-4.686 16.971 0L480 208v80H192v-48z"></path></svg><!-- <i class="far fa-images"></i> Font Awesome fontawesome.com -->
+                    </span>
+                    <span>Demo 🤗</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://huggingface.co/marcosv/InstructIR" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <svg class="svg-inline--fa fa-images fa-w-18" aria-hidden="true" focusable="false" data-prefix="far" data-icon="images" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v48H54a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6v-10h48zm42-336H150a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6V86a6 6 0 0 0-6-6zm6-48c26.51 0 48 21.49 48 48v256c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h384zM264 144c0 22.091-17.909 40-40 40s-40-17.909-40-40 17.909-40 40-40 40 17.909 40 40zm-72 96l39.515-39.515c4.686-4.686 12.284-4.686 16.971 0L288 240l103.515-103.515c4.686-4.686 12.284-4.686 16.971 0L480 208v80H192v-48z"></path></svg><!-- <i class="far fa-images"></i> Font Awesome fontawesome.com -->
+                    </span>
+                    <span>Models 🤗</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background-color:#efeff081">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <h2 class="title is-3">TL;DR & Abstract </h2>
+
+          <div class="content has-text-justified">
+
+            <b>InstructIR takes as input an image and a human-written instruction for how to improve that image.</b> 
+              The (single) neural model performs all-in-one image restoration. 
+              InstructIR achieves state-of-the-art results on several restoration tasks including image denoising, deraining, deblurring, dehazing, and (low-light) image enhancement.
+              Test the model now on <a href="https://huggingface.co/spaces/marcosv/InstructIR"> HF 🤗 InstructIR space </a>
+              <br>
+              🚀 You can start with the <a href="https://github.com/mv-lab/InstructIR/blob/main/demo.ipynb">demo tutorial</a> from our github.
+              <br>
+              <br>
+              <b>🔥🔥 More content comming soon: all test results, more model versions, tables, etc.</b>
+              <br>
+              <br>
+
+            <center>
+            <details>
+            <summary> <h3> Abstract</h4> (click me to read)</summary>
+            <p align="justify">
+            Image restoration is a fundamental problem that involves recovering a high-quality clean image from its degraded observation. All-In-One image restoration models can effectively restore images from various types and levels of degradation using degradation-specific information as prompts to guide the restoration model. In this work, we present the first approach that uses human-written instructions to guide the image restoration model. Given natural language prompts, our model can recover high-quality images from their degraded counterparts, considering multiple degradation types. Our method, InstructIR, achieves state-of-the-art results on several restoration tasks including image denoising, deraining, deblurring, dehazing, and (low-light) image enhancement. InstructIR improves +1dB over previous all-in-one restoration methods. Moreover, our dataset and results represent a novel benchmark for new research on text-guided image restoration and enhancement.
+            </p>
+            </details>
+            </center>
+
+
+          </div>
+          
+        </div>
+      </div>
+        
+    </div>
+  </section>
+
+
+
+<section class="section">
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3"> Examples of InstructIR</h2>
+      <img src="images/instructir_teaser.png" width="60%">
+    </div>
+  </div>
+
+
+  <div class="container mt-5">
+    <!-- <h2 class="text-center mb-5">Who's GPT-4's favorite? Battles between State-of-the-Art Chatbots</h2> -->
+    <!-- Selection -->
+    <div class="form-row" style="justify-content: flex-end;">
+      <div class="form-group col-md-1">
+        <div class="col-md-2" style="width: 100%"><label>&nbsp;</label></div>
+        <div class="btn-group" role="group" aria-label="Left and Right Controller" style="width: 100%;align-items: flex-end;justify-content: center;flex-direction: row;display: flex;">
+          <button type="button" class="form-control btn btn-primary" id="prev-question"><i class="material-icons">keyboard_arrow_left</i></button>
+          <button type="button" class="form-control btn btn-primary" id="next-question"><i class="material-icons">keyboard_arrow_right</i></button>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Question Card -->
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <div class="card mb-4" style="width: 100%; display: flex; align-items: center;">
+        <!-- <p><b>Description:</b> Monalisa is a famous painting by Leonardo da Vinci. </p> -->
+
+        <div class="card-body" id="selected-question" style="display: flex; height: 80vh;">
+          <div class="chat-history"><article class="media"><figure class="media-left"><span class="icon is-large"><svg class="svg-inline--fa fa-user fa-w-14 fa-2x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg><!-- <i class="fas fas fa-2x fa-user "></i> Font Awesome fontawesome.com --></span></figure><div class="media-content"><div class="content"><p><strong>User</strong><br><pre style="background-color: white; font-size: 18px; font-family: Arial; padding: 0px; margin: 0px; white-space: pre-wrap; overflow-wrap: break-word;"></pre><img src="static/monalisa.jpg" style="max-width: 100%; max-height: 300px;"></p></div></div></article><article class="media"><figure class="media-left"><span class="icon is-large"><svg class="svg-inline--fa fa-user fa-w-14 fa-2x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg><!-- <i class="fas fas fa-2x fa-user "></i> Font Awesome fontawesome.com --></span></figure><div class="media-content"><div class="content"><p><strong>User</strong><br><pre style="background-color: white; font-size: 18px; font-family: Arial; padding: 0px; margin: 0px; white-space: pre-wrap; overflow-wrap: break-word;">Do you know who drew this painting?​</pre></p></div></div></article><article class="media"><figure class="media-left"><span class="icon is-large"><svg class="svg-inline--fa fa-robot fa-w-20 fa-2x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="robot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M32,224H64V416H32A31.96166,31.96166,0,0,1,0,384V256A31.96166,31.96166,0,0,1,32,224Zm512-48V448a64.06328,64.06328,0,0,1-64,64H160a64.06328,64.06328,0,0,1-64-64V176a79.974,79.974,0,0,1,80-80H288V32a32,32,0,0,1,64,0V96H464A79.974,79.974,0,0,1,544,176ZM264,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,264,256Zm-8,128H192v32h64Zm96,0H288v32h64ZM456,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,456,256Zm-8,128H384v32h64ZM640,256V384a31.96166,31.96166,0,0,1-32,32H576V224h32A31.96166,31.96166,0,0,1,640,256Z"></path></svg><!-- <i class="fas fas fa-2x fa-robot"></i> Font Awesome fontawesome.com --></span></figure><div class="media-content"><div class="content"><p><strong>LLaVA</strong><br><pre style="background-color: white; font-size: 18px; font-family: Arial; padding: 0px; margin: 0px; white-space: pre-wrap; overflow-wrap: break-word;">The painting depicts a woman, commonly believed to be Mona Lisa, the famous artwork by Leonardo da Vinci. It is a portrait painting that showcases the woman's enigmatic smile and has become one of the most famous and iconic art pieces in the world. The original work is displayed in the Louvre Museum in Paris, and it is known for its intricate details, use of oil paint, and the artist's innovative techniques that contributed to its enduring appeal and mystery.​​</pre></p></div></div></article></div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Citation BibTeX</h2>
+      <pre><code>
+    @misc{conde2024instructir,
+      title={High-Quality Image Restoration Following Human Instructions}, 
+      author={Marcos V. Conde, Gregor Geigle, Radu Timofte},
+      year={2024},
+      journal={arXiv preprint}
+    }
+  </code></pre>
+    </div>
+  </section>
+  
+  <section class="section" id="Acknowledgement">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Acknowledgement</h2>
+      <p>
+        This work was partly supported by the The Humboldt Foundation (AvH). Marcos Conde is also supported by Sony Interactive Entertainment, FTG.
+        This work is inspired in <a href="https://www.timothybrooks.com/instruct-pix2pix/">InstructPix2Pix</a>.
+        <br>
+        For any inquiries contact Marcos V. Conde: marcos.conde [at] uni-wuerzburg.de
+      </p>
+      <p>
+        This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and <a href="https://github.com/nerfies/nerfies.github.io">LLaVA</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>. We thank the original authors of this website template.
+      </p>
+
+  <script>
+    // Handle message showing
+    function createChatRow(sender, text, imageSrc) {
+      var article = document.createElement("article");
+      article.className = "media"
+
+      var figure = document.createElement("figure");
+      figure.className = "media-left";
+
+      var span = document.createElement("span");
+      span.className = "icon is-large";
+
+      var icon = document.createElement("i");
+      icon.className = "fas fas fa-2x" + (sender === "User" ? " fa-user " : sender === "InstructIR" ? " fa-robot" : "");
+
+      var media = document.createElement("div");
+      media.className = "media-content";
+
+      var content = document.createElement("div");
+      content.className = "content";
+
+      var para = document.createElement("p");
+
+      // wrap text in pre tag to preserve whitespace and line breaks
+      var pre_text = document.createElement("pre");
+      pre_text.style = "background-color: white; font-size: 18px; font-family: Arial; padding: 0; margin: 0; white-space: pre-wrap; word-wrap: break-word;";
+      var paraText = document.createTextNode(text);
+      pre_text.appendChild(paraText);
+
+      var strong = document.createElement("strong");
+      strong.innerHTML = sender;
+      var br = document.createElement("br");
+
+      para.appendChild(strong);
+      para.appendChild(br);
+      para.appendChild(pre_text);
+
+      // Add image if imageSrc is provided
+      if (imageSrc) {
+        var img = document.createElement("img");
+        img.src = imageSrc;
+        img.style = "max-width: 100%; max-height: 300px;"; // Adjust the style as needed
+        para.appendChild(img);
+      }
+
+      content.appendChild(para);
+      media.appendChild(content);
+      span.appendChild(icon);
+      figure.appendChild(span);
+      if (sender !== "Description") {
+        article.appendChild(figure);
+      };
+      article.appendChild(media);
+      return article;
+    }
+
+    function addMessageToChatHistory(sender, message, imageSrc) {
+      const chatHistory = document.querySelector('.chat-history');
+      const chatRow = createChatRow(sender, message, imageSrc);
+      chatHistory.appendChild(chatRow);
+      chatHistory.scrollTop = chatHistory.scrollHeight;
+    }
+
+    function clearChatHistory() {
+      const chatHistory = document.querySelector('.chat-history');
+      chatHistory.innerHTML = "";
+    }
+
+    // 
+    const conversations = [
+      {
+        "description": "Restore an image using natural language",
+        "turns": [
+          ["User", "I love this photo, could you remove the raindrops? please keep the content intact", "images/rain-020.png"],
+          ["InstructIR", "Sure! let me remove the rain", "images/results/result1.png"],
+          ["User", "Great! can you make it look stunning? like a professional photo"],
+          ["InstructIR", "I will enhance it", "images/results/result2.png"],
+          ["User", "amazing, thank you InstructIR"],
+        ]
+      },
+    ];
+
+    // The current image index
+    let currentIndex = 0;
+
+    // The function to update the displayed chat history
+    function update_dialog_demo() {
+      // Clear the chat history
+      clearChatHistory();
+
+      for (let i = 0; i < conversations[currentIndex].turns.length; i++) {
+        if (conversations[currentIndex].turns[i].length == 2) {
+          addMessageToChatHistory(conversations[currentIndex].turns[i][0], conversations[currentIndex].turns[i][1]);
+        }
+        else {
+          addMessageToChatHistory(conversations[currentIndex].turns[i][0], conversations[currentIndex].turns[i][1], conversations[currentIndex].turns[i][2]);
+        }
+      }
+
+      // scroll to the top of the chat history
+      document.querySelector('.chat-history').scrollTop = 0;
+    }
+
+    // Initialize the displayed image
+    update_dialog_demo();
+
+    // Event listeners for the buttons
+    document.getElementById('prev-question').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + conversations.length) % conversations.length;
+      update_dialog_demo();
+    });
+
+    document.getElementById('next-question').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % conversations.length;
+      update_dialog_demo();
+    });
+
+
+  </script>
+
+
+
+
+</body></html>
