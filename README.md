@@ -1,8 +1,8 @@
 # InstructIR ✏️🖼️
-## [High-Quality Image Restoration Following Human Instructions]()
+## [High-Quality Image Restoration Following Human Instructions](https://mv-lab.github.io/InstructIR/)
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](static/instructir_paper.pdf)
-<a href="https://colab.research.google.com/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> 
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2401.16468)
+<a href="https://colab.research.google.com/](https://colab.research.google.com/drive/1OrTvS-i6uLM2Y8kIkq8ZZRwEQxQFchfq?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> 
 [![Hugging Face](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue)](https://huggingface.co/spaces/marcosv/InstructIR) 
 [![Replicate](https://img.shields.io/badge/Demo-%F0%9F%9A%80%20Replicate-blue)](https://replicate.com/mv-lab) 
 
@@ -11,7 +11,7 @@
 
 Computer Vision Lab, University of Wuerzburg | Sony PlayStation, FTG
 
-<img src="images/instructir_teaser.png" alt="InstructIR" width=100%>
+<a href="https://mv-lab.github.io/InstructIR/"><img src="images/instructir_teaser.png" alt="InstructIR" width=100%></a>
 
 ### TL;DR: quickstart
 InstructIR takes as input an image and a human-written instruction for how to improve that image. The neural model performs all-in-one image restoration. InstructIR achieves state-of-the-art results on several restoration tasks including image denoising, deraining, deblurring, dehazing, and (low-light) image enhancement.
@@ -29,20 +29,20 @@ Image restoration is a fundamental problem that involves recovering a high-quali
 ### TODO / News 🔥
 
 - [ ] Replicate Demo
-- [ ] Upload all test results (ETA 1st Feb)
+- [ ] Upload all test results for comparisons (ETA 1st Feb)
 - [x] Upload models to HF 🤗 [(download the models here)](https://huggingface.co/marcosv/InstructIR)
 - [x] 🤗 [Hugging Face Demo](https://huggingface.co/spaces/marcosv/InstructIR) try it now
-- [x] Colab Tutorial (check [demo.ipynb](demo.ipynb))
+- [x] [Colab Tutorial](https://colab.research.google.com/drive/1OrTvS-i6uLM2Y8kIkq8ZZRwEQxQFchfq?usp=sharing) (check [demo.ipynb](demo.ipynb))
 
 ### Try it / Tutorial
 
 [Try it]((https://huggingface.co/spaces/marcosv/InstructIR)) directly on 🤗 Hugging Face at no cost, no code.
 
 
-🚀 You can start with the [demo tutorial](demo.ipynb). We also host the same tutorial on [google colab]() so you can run it using free GPUs!.
+🚀 You can start with the [demo tutorial](demo.ipynb). We also host the same tutorial on [google colab](https://colab.research.google.com/drive/1OrTvS-i6uLM2Y8kIkq8ZZRwEQxQFchfq?usp=sharing) so you can run it using free GPUs!.
 
 <center> 
-<img src="images/instructir_teaser.gif" alt="InstructIR App" width=50%>
+<a href="https://mv-lab.github.io/InstructIR/"><img src="images/instructir_teaser.gif" alt="InstructIR App" width=50%></a>
 </center>
 <br>
 
@@ -55,7 +55,7 @@ python app.py
 
 <center> 
 <br>
-<img src="images/gradio.png" alt="InstructIR Gradio" width=90%>
+<a href="https://huggingface.co/spaces/marcosv/InstructIR"> <img src="images/gradio.png" alt="InstructIR Gradio" width=90%> </a>
 </center>
 
 ### Results
@@ -106,11 +106,11 @@ The final result looks indeed stunning 🤗 You can do it yourself in the [demo 
 
 > Disclaimer: please remember this is not a product, thus, you will notice some limitations.
 
-- ***How should I start?*** Check our [demo Tutorial](demo.ipynb) and also our [google collab]() notebook.
+- ***How should I start?*** Check our [demo Tutorial](demo.ipynb) and also our [google collab](https://colab.research.google.com/drive/1OrTvS-i6uLM2Y8kIkq8ZZRwEQxQFchfq?usp=sharing) notebook.
 
 - ***How can I compare with your method?*** You can download the results for several benchmarks above on [Results](###Results).
 
-- ***How can I test the model? I just want to play with it***: Visit our 🤗 [Hugging Face demo]() and test ir for free,
+- ***How can I test the model? I just want to play with it***: Visit our 🤗 [Hugging Face demo](https://huggingface.co/spaces/marcosv/InstructIR) and test ir for free,
 
 - ***Why aren't you using diffusion-based models?*** (1) We want to keep the solution simple and efficient. (2) Our priority is high-fidelity --as in many industry scenarios realted to computational photography--. 
 
