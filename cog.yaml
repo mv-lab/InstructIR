@@ -1,0 +1,19 @@
+# Configuration for Cog ⚙️
+# Reference: https://github.com/replicate/cog/blob/main/docs/yaml.md
+
+build:
+  gpu: true
+  system_packages:
+    - "libgl1-mesa-glx"
+    - "libglib2.0-0"
+  python_version: "3.11"
+  python_packages:
+    - torch==2.0.1
+    - transformers==4.37.2
+    - PyYAML==6.0.1
+    - Pillow==10.2.0
+    - sentence-transformers==2.3.0
+    - opencv-python==4.9.0.80
+    - matplotlib==3.8.2
+    - imageio==2.33.1
+predict: "predict.py:Predictor"
