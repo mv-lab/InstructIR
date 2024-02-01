@@ -6,8 +6,6 @@
 [![Hugging Face](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue)](https://huggingface.co/spaces/marcosv/InstructIR) 
 [![Replicate](https://img.shields.io/badge/Demo-%F0%9F%9A%80%20Replicate-blue)](https://replicate.com/mv-lab/instructir) 
 [![Paper page](https://huggingface.co/datasets/huggingface/badges/resolve/main/paper-page-sm.svg)](https://huggingface.co/papers/2401.16468)
-[![Model on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-sm.svg)](https://huggingface.co/marcosv/InstructIR)
-[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-md.svg)](https://huggingface.co/spaces/marcosv/InstructIR)
 
 
 [Marcos V. Conde](https://scholar.google.com/citations?user=NtB1kjYAAAAJ&hl=en), [Gregor Geigle](https://scholar.google.com/citations?user=uIlyqRwAAAAJ&hl=en), [Radu Timofte](https://scholar.google.com/citations?user=u3MwH5kAAAAJ&hl=en)
@@ -31,11 +29,13 @@ Image restoration is a fundamental problem that involves recovering a high-quali
 
 ### TODO / News 🔥
 
-- [x] Replicate Demo
 - [ ] Upload all test results for comparisons (ETA 1st Feb)
-- [x] Upload models to HF 🤗 [(download the models here)](https://huggingface.co/marcosv/InstructIR)
-- [x] 🤗 [Hugging Face Demo](https://huggingface.co/spaces/marcosv/InstructIR) try it now
-- [x] [Colab Tutorial](https://colab.research.google.com/drive/1OrTvS-i6uLM2Y8kIkq8ZZRwEQxQFchfq?usp=sharing) (check [demo.ipynb](demo.ipynb))
+- [x] [Replicate Demo](https://replicate.com/mv-lab/instructir)
+- [x] Upload models to HF 🤗 [(download the models here)](https://huggingface.co/marcosv/InstructIR) [![Model on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-sm.svg)](https://huggingface.co/marcosv/InstructIR)
+- [x] 🤗 [Hugging Face Demo](https://huggingface.co/spaces/marcosv/InstructIR) try it now [![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/marcosv/InstructIR)
+
+
+- [x] [Google Colab Tutorial](https://colab.research.google.com/drive/1OrTvS-i6uLM2Y8kIkq8ZZRwEQxQFchfq?usp=sharing) (check [demo.ipynb](demo.ipynb))
 
 ### Try it / Tutorial
 
@@ -44,24 +44,26 @@ Image restoration is a fundamental problem that involves recovering a high-quali
 
 🚀 You can start with the [demo tutorial](demo.ipynb). We also host the same tutorial on [google colab](https://colab.research.google.com/drive/1OrTvS-i6uLM2Y8kIkq8ZZRwEQxQFchfq?usp=sharing) so you can run it using free GPUs!.
 
-<center> 
-<a href="https://mv-lab.github.io/InstructIR/"><img src="images/instructir_teaser.gif" alt="InstructIR App" width=50%></a>
-</center>
-<br>
 
-#### Gradio Demo
+| | | 
+|----------|:-------------:
+| <a href="https://mv-lab.github.io/InstructIR/"><img src="images/instructir_teaser.gif" alt="InstructIR App"></a> |  <a href="https://mv-lab.github.io/InstructIR/"><img src="static/replicate.png" alt="InstructIR App"></a> |
+
+
+### Gradio Demo
 We made a simple [Gradio demo](app.py) you can run (locally) on your machine [here](app.py). You need Python>=3.9 and [these requirements](requirements_gradio.txt) for it: `pip install -r requirements_gradio.txt`
 
 ```
 python app.py
 ```
 
-<center> 
 <br>
-<a href="https://huggingface.co/spaces/marcosv/InstructIR"> <img src="images/gradio.png" alt="InstructIR Gradio" width=90%> </a>
-</center>
+<a href="https://huggingface.co/spaces/marcosv/InstructIR"> 
+<img src="images/gradio.png" alt="InstructIR Gradio"> 
+</a>
 
-### Results
+
+## Results
 
 You can download the paper results from here. We test InstructIR in the following benchmarks:
 
@@ -75,6 +77,35 @@ You can download the paper results from here. We test InstructIR in the followin
 | [MIT5K](https://data.csail.mit.edu/graphics/fivek/)             |   Image Enhancement   | [Download]() |
 
 TODO: Add download links for all the benchmarks.
+
+
+<img src="static/tables/table1.png" width=100%>
+
+<br>
+
+<details>
+<summary> <b> Multi-task Results on Dehazing, Deraining, Denoising </b> </summary>
+<img src="static/tables/table-3d.png" width=100%>
+</details>
+
+<details>
+<summary> <b> Denoising Results (click to read) </b> </summary>
+<img src="static/tables/table-dn.png" width=100%>
+</details>
+
+<details>
+<summary> <b> Low-light Image Enhancement (LOL) Results (click to read) </b> </summary>
+<img src="static/tables/table-lol.png" width=100%>
+</details>
+
+<details>
+<summary> <b> Color Image Enhancement (MIT5K) Results (click to read) </b> </summary>
+<img src="static/tables/table-mit5k.png" width=100%>
+</details>
+
+<br>
+
+--------
 
 ### Control and Interact
 
@@ -107,7 +138,7 @@ The final result looks indeed stunning 🤗 You can do it yourself in the [demo 
 
 ### FAQS
 
-> Disclaimer: please remember this is not a product, thus, you will notice some limitations.
+> Disclaimer: please remember this is not a product, thus, you will notice some limitations. As most all-in-one restoration methods, it struggles to generalize on real-world images -- we are working on improving it.
 
 - ***How should I start?*** Check our [demo Tutorial](demo.ipynb) and also our [google collab](https://colab.research.google.com/drive/1OrTvS-i6uLM2Y8kIkq8ZZRwEQxQFchfq?usp=sharing) notebook.
 
