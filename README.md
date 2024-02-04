@@ -1,5 +1,5 @@
 # InstructIR ✏️🖼️
-## [High-Quality Image Restoration Following Human Instructions](https://mv-lab.github.io/InstructIR/)
+## [High-Quality Image Restoration Following Human Instructions](https://arxiv.org/abs/2401.16468)
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2401.16468)
 <a href="https://colab.research.google.com/drive/1OrTvS-i6uLM2Y8kIkq8ZZRwEQxQFchfq?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> 
@@ -8,11 +8,15 @@
 [![Paper page](https://huggingface.co/datasets/huggingface/badges/resolve/main/paper-page-sm.svg)](https://huggingface.co/papers/2401.16468)
 
 
-[Marcos V. Conde](https://scholar.google.com/citations?user=NtB1kjYAAAAJ&hl=en), [Gregor Geigle](https://scholar.google.com/citations?user=uIlyqRwAAAAJ&hl=en), [Radu Timofte](https://scholar.google.com/citations?user=u3MwH5kAAAAJ&hl=en)
+[Marcos V. Conde](https://mv-lab.github.io/), [Gregor Geigle](https://scholar.google.com/citations?user=uIlyqRwAAAAJ&hl=en), [Radu Timofte](https://scholar.google.com/citations?user=u3MwH5kAAAAJ&hl=en)
 
 Computer Vision Lab, University of Wuerzburg | Sony PlayStation, FTG
 
-<a href="https://mv-lab.github.io/InstructIR/"><img src="images/instructir_teaser.png" alt="InstructIR" width=100%></a>
+
+<a href="https://mv-lab.github.io/InstructIR/"><img src="images/instructir.gif" alt="InstructIR" width=100%></a>
+
+Video courtesy of Gradio ([see their post about InstructIR](https://twitter.com/Gradio/status/1752776176811041049)). Also shoutout to AK -- [see his tweet](https://twitter.com/_akhaliq/status/1752551364566126798).
+
 
 ### TL;DR: quickstart
 InstructIR takes as input an image and a human-written instruction for how to improve that image. The neural model performs all-in-one image restoration. InstructIR achieves state-of-the-art results on several restoration tasks including image denoising, deraining, deblurring, dehazing, and (low-light) image enhancement.
@@ -45,12 +49,9 @@ Image restoration is a fundamental problem that involves recovering a high-quali
 🚀 You can start with the [demo tutorial](demo.ipynb). We also host the same tutorial on [google colab](https://colab.research.google.com/drive/1OrTvS-i6uLM2Y8kIkq8ZZRwEQxQFchfq?usp=sharing) so you can run it using free GPUs!.
 
 
-| | | 
-|----------|:-------------:
-| <a href="https://mv-lab.github.io/InstructIR/"><img src="images/instructir_teaser.gif" alt="InstructIR App"></a> |  <a href="https://mv-lab.github.io/InstructIR/"><img src="static/replicate.png" alt="InstructIR App"></a> |
+<a href="https://mv-lab.github.io/InstructIR/"><img src="images/instructir_teaser.png" alt="InstructIR" width=100%></a>
 
-
-### Gradio Demo
+### Gradio Demo <a href='https://github.com/gradio-app/gradio'><img src='https://img.shields.io/github/stars/gradio-app/gradio'></a> 
 We made a simple [Gradio demo](app.py) you can run (locally) on your machine [here](app.py). You need Python>=3.9 and [these requirements](requirements_gradio.txt) for it: `pip install -r requirements_gradio.txt`
 
 ```
