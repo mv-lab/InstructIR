@@ -33,11 +33,17 @@ Image restoration is a fundamental problem that involves recovering a high-quali
 
 ### TODO / News 🔥
 
-- [ ] Upload all test results for comparisons (ETA 1st Feb)
-- [x] [Replicate Demo](https://replicate.com/mv-lab/instructir)
-- [x] Upload models to HF 🤗 [(download the models here)](https://huggingface.co/marcosv/InstructIR) [![Model on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-sm.svg)](https://huggingface.co/marcosv/InstructIR)
-- [x] 🤗 [Hugging Face Demo](https://huggingface.co/spaces/marcosv/InstructIR) try it now [![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/marcosv/InstructIR)
+- [ ] Upload Model weights and results for other InstructIR variants (3D, 5D).
 
+- [x] [download all the test datasets](https://drive.google.com/file/d/11wGsKOMDVrBlsle4xtzORPLZAsGhel8c/view?usp=sharing) for all-in-one restoration.
+
+- [x] check the instructions below to run `eval_instructir.py` and get all the metrics and results for all-in-one restoration.
+
+- [x] You can download all the qualitative results here [instructir_results.zip](https://github.com/mv-lab/InstructIR/releases/download/instructir-results/instructir_results.zip)
+
+- [x] Upload models to HF 🤗 [(download the models here)](https://huggingface.co/marcosv/InstructIR) 
+
+- [x] 🤗 [Hugging Face Demo](https://huggingface.co/spaces/marcosv/InstructIR) try it now
 
 - [x] [Google Colab Tutorial](https://colab.research.google.com/drive/1OrTvS-i6uLM2Y8kIkq8ZZRwEQxQFchfq?usp=sharing) (check [demo.ipynb](demo.ipynb))
 
@@ -51,33 +57,41 @@ Image restoration is a fundamental problem that involves recovering a high-quali
 
 <a href="https://mv-lab.github.io/InstructIR/"><img src="images/instructir_teaser.png" alt="InstructIR" width=100%></a>
 
-### Gradio Demo <a href='https://github.com/gradio-app/gradio'><img src='https://img.shields.io/github/stars/gradio-app/gradio'></a> 
-We made a simple [Gradio demo](app.py) you can run (locally) on your machine [here](app.py). You need Python>=3.9 and [these requirements](requirements_gradio.txt) for it: `pip install -r requirements_gradio.txt`
-
-```
-python app.py
-```
-
-<br>
-<a href="https://huggingface.co/spaces/marcosv/InstructIR"> 
-<img src="images/gradio.png" alt="InstructIR Gradio"> 
-</a>
-
-
 ## Results
 
-You can download the paper results from here. We test InstructIR in the following benchmarks:
+Check `test.py` and `eval_instructir.py`. The following command provides all the metric for all the benchmarks using the pre-trained models in `models/`. The results from InstructIR are saved in the indicated folder `results/`
+
+```
+python eval_instructir.py --model models/im_instructir-7d.pt --lm models/lm_instructir-7d.pt --device 0 --config configs/eval5d.yml --save results/
+```
+
+An example of the output log is:
+
+```
+>>> Eval on CBSD68_15 noise 0
+CBSD68_15_base 24.84328738380881
+CBSD68_15_psnr 33.98722295200123 68
+CBSD68_15_ssim 0.9315137801801457
+
+....
+```
+
+You can **[download all the test datasets](https://drive.google.com/file/d/11wGsKOMDVrBlsle4xtzORPLZAsGhel8c/view?usp=sharing)**, and locate them in `test-data/`. Make sure the paths are updated in the config file `configs/eval5d.yml`.
+
+-------
+
+You can **[download all the paper results](https://github.com/mv-lab/InstructIR/releases/download/instructir-results/instructir_results.zip)** -check releases-. We test InstructIR in the following benchmarks:
 
 | Dataset           | Task     | Test Results |
 | :---------------- | :------ | ----: |
-| BSD68             |   Denoising   | [Download]() |
-| Urban100          |   Denoising   | [Download]() |
-| Rain100           |   Deraining   | [Download]() |
-| [GoPro](https://seungjunnah.github.io/Datasets/gopro)             |   Deblurring  | [Download]() |
-| [LOL](https://daooshee.github.io/BMVC2018website/)               |   Lol Image Enhancement   | [Download]() |
-| [MIT5K](https://data.csail.mit.edu/graphics/fivek/)             |   Image Enhancement   | [Download]() |
+| BSD68             |   Denoising   | [Download](https://github.com/mv-lab/InstructIR/releases/download/instructir-results/instructir_results.zip) |
+| Urban100          |   Denoising   | [Download](https://github.com/mv-lab/InstructIR/releases/download/instructir-results/instructir_results.zip) |
+| Rain100           |   Deraining   | [Download](https://github.com/mv-lab/InstructIR/releases/download/instructir-results/instructir_results.zip) |
+| [GoPro](https://seungjunnah.github.io/Datasets/gopro)             |   Deblurring  | [Download](https://github.com/mv-lab/InstructIR/releases/download/instructir-results/instructir_results.zip) |
+| [LOL](https://daooshee.github.io/BMVC2018website/)               |   Lol Image Enhancement   | [Download](https://github.com/mv-lab/InstructIR/releases/download/instructir-results/instructir_results.zip) |
+| [MIT5K](https://data.csail.mit.edu/graphics/fivek/)             |   Image Enhancement   | [Download](https://github.com/mv-lab/InstructIR/releases/download/instructir-results/instructir_results.zip) |
 
-TODO: Add download links for all the benchmarks.
+In releases or clicking the link above you can download [instructir_results.zip](https://github.com/mv-lab/InstructIR/releases/download/instructir-results/instructir_results.zip) which includes all the qualitative results for those datasets [1.9 Gbs].
 
 
 <img src="static/tables/table1.png" width=100%>
@@ -148,6 +162,18 @@ The final result looks indeed stunning 🤗 You can do it yourself in the [demo 
 - ***How can I test the model? I just want to play with it***: Visit our 🤗 [Hugging Face demo](https://huggingface.co/spaces/marcosv/InstructIR) and test ir for free,
 
 - ***Why aren't you using diffusion-based models?*** (1) We want to keep the solution simple and efficient. (2) Our priority is high-fidelity --as in many industry scenarios realted to computational photography--. 
+
+### Gradio Demo <a href='https://github.com/gradio-app/gradio'><img src='https://img.shields.io/github/stars/gradio-app/gradio'></a> 
+We made a simple [Gradio demo](app.py) you can run (locally) on your machine [here](app.py). You need Python>=3.9 and [these requirements](requirements_gradio.txt) for it: `pip install -r requirements_gradio.txt`
+
+```
+python app.py
+```
+
+<br>
+<a href="https://huggingface.co/spaces/marcosv/InstructIR"> 
+<img src="images/gradio.png" alt="InstructIR Gradio"> 
+</a>
 
 
 ### Acknowledgments

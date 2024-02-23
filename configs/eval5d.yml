@@ -21,20 +21,18 @@ test:
     batch_size: 1
     num_workers: 3
     
-    dn_datapath: "data/denoising_testsets/"
-    dn_datasets: ["CBSD68", "urban100", "Kodak24", "McMaster"]
+    dn_datapath: "test-data/denoising_testsets/"
+    dn_datasets: ["CBSD68", "urban100", "Kodak24"]
     dn_sigmas: [15, 25, 50]
 
-    rain_targets: ["data/Rain/rain_test/Rain100L/target/"]
-    rain_inputs:  ["data/Rain/rain_test/Rain100L/input/"]
+    rain_targets: ["test-data/Rain100L/target/"]
+    rain_inputs:  ["test-data/Rain100L/input/"]
 
-    haze_targets: "data/SOTS-OUT/GT/"
-    haze_inputs : "data/SOTS-OUT/IN/"
+    haze_targets: "test-data/SOTS/GT/"
+    haze_inputs : "test-data/SOTS/IN/"
 
-    lol_targets: "data/LOL/eval15/high/"
-    lol_inputs : "data/LOL/eval15/low/"
+    lol_targets: "test-data/LOL/high/"
+    lol_inputs : "test-data/LOL/low/"
 
-    gopro_targets: "data/gopro_test/GoPro/target/"
-    gopro_inputs: "data/gopro_test/GoPro/input/"
-
-    
+    gopro_targets: "test-data/GoPro/target/"
+    gopro_inputs: "test-data/GoPro/input/"
