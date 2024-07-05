@@ -1,5 +1,4 @@
-# InstructIR ✏️🖼️
-## [High-Quality Image Restoration Following Human Instructions](https://arxiv.org/abs/2401.16468)
+# InstructIR: High-Quality Image Restoration Following Human Instructions (ECCV 2024)
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2401.16468)
 <a href="https://colab.research.google.com/drive/1OrTvS-i6uLM2Y8kIkq8ZZRwEQxQFchfq?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> 
