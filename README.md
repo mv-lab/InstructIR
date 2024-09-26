@@ -187,10 +187,10 @@ For any inquiries contact Marcos V. Conde: <a href="mailto:marcos.conde@uni-wuer
 ### Citation BibTeX
 
 ```
-@misc{conde2024instructir,
-    title={High-Quality Image Restoration Following Human Instructions}, 
-    author={Marcos V. Conde, Gregor Geigle, Radu Timofte},
-    year={2024},
-    journal={arXiv preprint},
+@inproceedings{conde2024high,
+  title={InstructIR: High-Quality Image Restoration Following Human Instructions},
+  author={Conde, Marcos V and Geigle, Gregor and Timofte, Radu},
+  booktitle    = {Proceedings of the European Conference on Computer Vision (ECCV)},
+  year={2024}
 }
 ```
